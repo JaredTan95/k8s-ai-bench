@@ -58,6 +58,9 @@ run: ## Run the application
 	@echo "λ Running $(BINARY_NAME) from source..."
 	go run $(MAIN_PACKAGE)
 
+serve-site: ## Serve the local results visualization site
+	cd site && python3 -m http.server
+
 # --- Code Quality Tasks (using dev scripts) ---
 fmt: ## Format code using dev script
 	@echo "λ Formatting code (using dev script)..."
